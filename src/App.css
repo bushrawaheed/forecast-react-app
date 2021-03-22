@@ -1,0 +1,9 @@
+.App footer {
+  color: black;
+  text-align: center;
+  font-size: small;
+  font-weight: lighter;
+}
+.App a {
+  color: purple;
+}
