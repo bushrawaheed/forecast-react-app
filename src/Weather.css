@@ -41,11 +41,11 @@ li {
   text-align: center;
 }
 
-.weather-temperature img {
-  margin-right: 0px;
-  height: 70px;
+.weather-temperature canvas {
   width: 70px;
-  float: left;
+  display: inline-block;
+  margin-right: 5px;
+  height: 64px;
 }
 .weather-temperature strong {
   color: #321a70;

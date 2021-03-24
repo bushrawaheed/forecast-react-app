@@ -5,11 +5,23 @@ import WeatherSearch from "./WeatherSearch";
 
 
 export default function Weather(props) {
-  
-  const[ready,setReady]=useState(false);
-  const [weatherData,setWeatherData]=useState({});
+  const [weatherData,setWeatherData]=useState({ready:false});
   const[city,setCity]=useState(props.defaultCity); 
-function search(){
+
+ function handleResponse(response){
+    setWeatherData({
+    ready:true,
+    city: (response.data.name),
+    temperature: Math.round(response.data.main.temp),
+    date:new Date(response.data.dt *1000),
+    description:(response.data.weather[0].description),
+    icon: response.data.weather[0].icon,
+    humidity: Math.round(response.data.main.temp_min),
+    wind: Math.round(response.data.wind.speed),
+    Temp_min: Math.round(response.data.main.temp_min),
+        });
+  }
+  function search(){
  const apiKey="2129fd04df3dd86efb944950e327f7a5";
    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
    axios.get(apiUrl).then(handleResponse); 
@@ -23,20 +35,7 @@ function handleChange(event){
 setCity(event.target.value);
 }
 
-  function handleResponse(response){
-        console.log(response.data);
-        setWeatherData({
-            ready:true,
-    city: (response.data.name),
-    temperature: Math.round(response.data.main.temp),
-    date:new Date(response.data.dt *1000),
-    description:(response.data.weather[0].description),
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-    humidity: Math.round(response.data.main.temp_min),
-    wind: Math.round(response.data.wind.speed),
-    Temp_min: Math.round(response.data.main.temp_min),
-        });
-  }
+ 
   if(weatherData.ready){
     return (
        <div className="Weather">
