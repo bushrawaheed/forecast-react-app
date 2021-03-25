@@ -3,15 +3,15 @@ import ReactAnimatedWeather from "react-animated-weather";
 
 function Check(temperatureValue){
 
-    if(temperatureValue<10){
+if(temperatureValue<15){
         return "grey";
     }
 else{
-     if(temperatureValue >=15 < 30){
+    if(temperatureValue >=15 &&  temperatureValue<= 35){
         return "orange";
     }
     else{
-        return "red";
+      return "red";
     }
 }
 }
