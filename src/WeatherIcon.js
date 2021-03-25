@@ -1,20 +1,20 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
-function Check(temperatureValue){
+//function Check(temperatureValue){
 
-if(temperatureValue<15){
-        return "grey";
-    }
-else{
-    if(temperatureValue >=15 &&  temperatureValue<= 35){
-        return "orange";
-    }
-    else{
-      return "red";
-    }
-}
-}
+//if(temperatureValue<15 ){
+  //      return "lightblue";
+    //}
+//else{
+  //  if(temperatureValue >=15 &&  temperatureValue<= 35 ){
+    //    return "orange";
+    //}
+    //else{
+     // return "red";
+   // }
+//}
+//}
 export default function WeatherIcon(props) {
   const codeMapping = {
     "01d": "CLEAR_DAY",
@@ -36,11 +36,10 @@ export default function WeatherIcon(props) {
     "50d": "FOG",
     "50n": "FOG"
   };
-  
   return (
     <ReactAnimatedWeather
       icon={codeMapping[props.code]}
-      color= {Check(props.temperature)}
+      color= {(props.temperature)}
       size={50}
       animate={true}
     />

@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import axios from 'axios';
 import "./Weather.css";
 import WeatherSearch from "./WeatherSearch";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
@@ -28,7 +29,6 @@ export default function Weather(props) {
 }
   function handleSubmit(event){
 event.preventDefault();
-//search for a city
 search();
   }
 function handleChange(event){
@@ -61,6 +61,7 @@ setCity(event.target.value);
             </div>
             </form>
                <WeatherSearch data={weatherData}/>
+               <WeatherForecast city={weatherData.city}/>
           </div>
       </div>
     </div>
