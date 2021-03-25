@@ -1,24 +1,23 @@
 import React,{useState}from "react";
 import axios from "axios";
-import "./WeatherForecast.css";
-import WeatherIcon from "./WeatherIcon";
+import ForecastDays from "./ForecastDays";
+
 export default  function WeatherForecast(props){
     const [loaded,setLoaded]=useState(false); 
-       const [forecast,setForecast]=useState(null); 
+    const [forecast,setForecast]=useState(null); 
 
     function handleForecast(response){ 
          setForecast(response.data);
          setLoaded(true);
      }
-     if(loaded){
+
+     if(loaded && props.city === forecast.city.name){
      return(
-     <div className="WeatherForecast row">
-         <div className="col">
-             {new Date(forecast.list[0].dt* 1000).getHours()}:00
-         <WeatherIcon code={forecast.list[0].weather[0].icon}/>
-         {Math.round(forecast.list[0].main.temp)} °C
-           </div>
-    </div> 
+     <div className="WeatherForecast row ">
+         {forecast.list.slice(0, 6) .map(function(forecastItem){
+             return <ForecastDays data={forecastItem}/>;
+        })}
+     </div> 
     );
    }
      else{

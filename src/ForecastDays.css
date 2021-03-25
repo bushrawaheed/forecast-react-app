@@ -1,0 +1,8 @@
+.ForecastDays canvas {
+  display: block;
+  margin: 11px auto;
+}
+.ForecastDays {
+  text-align: center;
+  margin: 8px 0;
+}

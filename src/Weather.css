@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://images.pexels.com/photos/2689377/pexels-photo-2689377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("https://images.pexels.com/photos/2099737/pexels-photo-2099737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .Weather {
@@ -15,7 +15,7 @@ body {
   padding: 60px;
   border: 1px solid black;
   border-radius: 15px;
-  max-width: 600px;
+  max-width: 650px;
   margin: 30px auto;
 }
 
