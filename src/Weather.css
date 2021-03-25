@@ -3,25 +3,17 @@ body {
 }
 
 .Weather {
-  background-image: linear-gradient(
-    to top,
-    lightgrey 0%,
-    lightgrey 1%,
-    #e0e0e0 26%,
-    #efefef 48%,
-    #d9d9d9 75%,
-    #bcbcbc 100%
-  );
+  background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
   padding: 60px;
-  border: 1px solid black;
-  border-radius: 15px;
-  max-width: 650px;
-  margin: 30px auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  max-width: 640px;
+  margin: 120px auto;
 }
 
 .Weather h1 {
   font-family: "Times New Roman", Times, serif;
-  color: purple;
+  color: #00383f;
   font-size: 44px;
   line-height: 30px;
   margin-bottom: 10;
@@ -35,26 +27,27 @@ body {
 
 li {
   list-style: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
-  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 28px;
   text-align: center;
 }
 
 .weather-temperature canvas {
-  width: 70px;
+  width: 60px;
   display: inline-block;
-  margin-right: 5px;
-  height: 64px;
+  margin-right: 1px;
+  height: 75px;
+  font-stretch: 100%;
 }
 .weather-temperature strong {
-  color: #321a70;
+  color: #00383f;
   float: left;
-  font-family: "Google Sans", arial, sans-serif;
-  font-size: 64px;
+  font-family: sans-serif;
+  font-size: 65px;
   font-stretch: 100%;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   height: auto;
   line-height: normal;
 }
