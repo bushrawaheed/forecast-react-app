@@ -15,7 +15,7 @@ export default function WeatherSearch(props){
               <div className="imagefix weather-temperature">
                <div className="float-left">
                 
-               <WeatherIcon code={props.data.icon} />
+               <WeatherIcon code={props.data.icon} temperature={props.data.temperature}/>
                </div>     
                <WeatherTemperature celsius={props.data.temperature}/>       
                

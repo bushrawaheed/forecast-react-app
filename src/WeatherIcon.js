@@ -1,18 +1,18 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
-function Check(mapValue){
+function Check(temperatureValue){
 
-    if(mapValue.includes('CLEAR')  ||  mapValue.includes('PARTLY')){
-        return "orange";
-    }
-
-    if(mapValue.includes('CLOUDY')  ||  mapValue.includes(`FOG`)){
+    if(temperatureValue<10){
         return "grey";
     }
-    if(mapValue.includes('RAIN')  ||  mapValue.includes(`SNOW`)){
-        return "darkblue";
-
+else{
+     if(temperatureValue >=15 < 30){
+        return "orange";
+    }
+    else{
+        return "red";
+    }
 }
 }
 export default function WeatherIcon(props) {
@@ -36,11 +36,11 @@ export default function WeatherIcon(props) {
     "50d": "FOG",
     "50n": "FOG"
   };
-  const mapValue = codeMapping[props.code]
+  
   return (
     <ReactAnimatedWeather
-      icon={mapValue}
-      color= {Check(mapValue)}
+      icon={codeMapping[props.code]}
+      color= {Check(props.temperature)}
       size={50}
       animate={true}
     />
