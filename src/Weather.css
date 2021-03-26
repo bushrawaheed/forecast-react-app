@@ -7,8 +7,9 @@ body {
   padding: 60px;
   border: 1px solid white;
   border-radius: 10px;
-  max-width: 640px;
-  margin: 120px auto;
+  max-width: 700px;
+  margin-top: 120px;
+  margin-left: 200px;
 }
 
 .Weather h1 {
@@ -21,8 +22,8 @@ body {
   text-align: center;
 }
 .weather-widget {
-  max-width: 600px;
-  margin: 10px;
+  max-width: 900px;
+  margin: 15px 10px;
 }
 
 li {
@@ -52,16 +53,16 @@ li {
   line-height: normal;
 }
 .weather-temperature .units {
-  color: #321a70;
+  color: #00383f;
   display: block;
   float: left;
-  font-family: arial, helvetica, sans-serif;
-  font-size: 16px;
+  font-family: sans-serif;
+  font-size: 17px;
   font-stretch: 100%;
   font-style: normal;
   font-weight: 400;
   height: 18px;
   line-height: normal;
-  margin-top: 6px;
+  margin-top: 15px;
   margin-left: 0px;
 }

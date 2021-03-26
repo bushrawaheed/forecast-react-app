@@ -2,8 +2,14 @@
   color: black;
   text-align: center;
   font-size: small;
-  font-weight: lighter;
+  font-weight: normal;
+  border: 3px solid #a7c6ca;
+  background-color: #015a66;
+  border-radius: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 200px;
 }
 .App a {
-  color: purple;
+  color: #abd5e7;
 }
